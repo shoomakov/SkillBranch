@@ -10,20 +10,12 @@ function addition (queryOne, queryTwo) {
   return a + b;
 }
 
-
 app.get('/', function(req, res) {
   //let query = Number(0);
   const query  = req.query,
         result = addition(query.a, query.b);
 
   return res.send(String(result));
-
-  //console.log(query.b);
-  // if (isNaN(result) == true) {
-  //   return res.send(String(0));
-  // } else {
-  //   return res.send(String(result));
-  // }
 });
 
 app.listen(port, function (){
